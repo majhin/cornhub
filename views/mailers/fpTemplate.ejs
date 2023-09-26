@@ -1,0 +1,45 @@
+<div style="border: 1px solid #ced4da; border-radius: 0.25rem; margin: 10px">
+	<div style="background-color: #f8f9fa; padding: 10px">Authello</div>
+	<div style="padding: 10px">
+		<h5 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem">
+			Hi <%= user.name %>
+		</h5>
+		<p style="margin-top: 0; margin-bottom: 0.5rem">
+			A password reset has been requested for the account as follows :
+		</p>
+		<p
+			style="
+				margin-top: 0;
+				margin-bottom: 0.5rem;
+				font-weight: 600;
+				text-decoration: none;
+			"
+		>
+			<strong><%= user.email %></strong>
+		</p>
+		<a
+			href="http://localhost:5173/reset-password/?token=<%= token.accessToken %>"
+			style="
+				display: inline-block;
+				font-weight: 400;
+				color: #ffffff;
+				text-align: center;
+				vertical-align: middle;
+				user-select: none;
+				background-color: #007bff;
+				border: 1px solid #007bff;
+				padding: 0.375rem 0.75rem;
+				font-size: 1rem;
+				line-height: 1.5;
+				border-radius: 0.25rem;
+				transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+					border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+				text-decoration: none;
+			"
+			>Reset Password</a
+		>
+		<p style="margin-top: 0; margin-bottom: 0.5rem">
+			If you have not requested this change, Kindly ignore this email.
+		</p>
+	</div>
+</div>
